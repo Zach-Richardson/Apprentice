@@ -1,0 +1,50 @@
+<div class="container skills" id="skills">
+
+	<div class="row">
+		<h1 class="text-center">
+			Skills
+			<button class="btn btn-default pull-right" ng-click="editSkills()" ng-hide="isEditingSkills">
+				Edit
+			</button>
+			<button class="btn btn-success pull-right" ng-click="saveSkills()" ng-show="isEditingSkills">
+				Save
+			</button>
+			<button class="btn btn-primary pull-right" ng-click="addSkill()" ng-show="isEditingSkills">
+				Add
+			</button>
+		</h1>
+	</div>
+
+	<!-- View -->
+	<div class="row" ng-hide="isEditingSkills">
+		<div class="col-md-8 col-md-offset-2">
+			<ul class="list-inline text-center">
+				<li ng-repeat="skill in skills">
+					{{skill.name}}<span class="badge">{{skill.years}}</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /View -->
+
+	<!-- Edit -->
+	<div class="row" ng-show="isEditingSkills">
+		<div class="col-md-8 col-md-offset-2">
+			<ul class="list-inline text-center">
+				<li ng-repeat="skill in skills">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="skill.name" placeholder="Name">
+					</div>
+					<div class="form-group">
+						<input type="number" class="form-control" ng-model="skill.years" placeholder="Years">
+					</div>
+					<div class="form-group">
+						<span class="glyphicon glyphicon-remove" style="color: white; cursor: pointer;" ng-click="removeSkill(skill)"></span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /Edit -->
+
+</div>

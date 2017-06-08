@@ -1,0 +1,75 @@
+body {
+	font-family: 'Roboto', Sans-Serif, Serif;
+	font-weight: 300;
+}
+hr {
+	border: 1px solid rgba(0, 0, 255, 0.3);
+}
+.glyphicon {
+	color: #00f;
+}
+
+/*-- Contact --*/
+.contact {
+	margin-bottom: 50px;
+}
+.contact textarea {
+	height: 100%;
+}
+.contact button {
+	margin-top: 20px;
+}
+
+/*-- Education --*/
+
+/*-- Entry --*/
+.entry {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.entry .well {	
+	background-color: #fff;
+}
+.entry h2 {
+	padding-left: 15px;
+}
+.entry hr {
+	margin: 20px 15px;
+}
+.entry li {
+	font-size: 1.5em;
+}
+
+/*-- Experience --*/
+
+/*-- Navbar --*/
+
+/*-- Skills --*/
+.skills li {
+	border-radius: 8px;
+	background-color: #00f;
+	color: #fff;
+	font-size: 2em;
+	margin: 10px;
+	padding: 10px 15px;
+}
+.skills .badge {
+	background-color: #fff;
+	color: #00f;
+	font-size: 1em;
+	border-radius: 50%;
+}
+
+/*-- Summary --*/
+.summary {    
+	background-image: url(https://storage.googleapis.com/idx-acnt-gs.ihouseprd.com/AR688778/site/banner_image_original_1438092449.jpg);
+	background-size: cover;
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+.summary .col-md-5 {
+	background-color: rgba(255, 255, 255, 0.6);
+	padding-top: 7.5px;
+	padding-bottom: 7.5px;
+}

@@ -1,0 +1,49 @@
+<div class="container-fluid summary" id="summary">
+
+	<!-- View -->
+	<div class="row" ng-hide="summary.isEditing">
+		<div class="col-md-3 col-md-offset-3">
+			<img class="img-responsive center-block" id="profile" width="100%">
+		</div>
+		<div class="col-md-5">
+			<button class="btn btn-default pull-right" ng-click="editSummary()">Edit</button> 
+			<h1>{{summary.data.name}}</h1>
+			<hr>
+			<h2>{{summary.data.occupation}}</h2>
+			<h2>{{summary.data.location}}</h2>
+			<h3><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;{{summary.data.phone}}</h3>
+			<h3><span class="glyphicon glyphicon-envelope"></span>&nbsp;{{summary.data.email}}</h3>
+		</div>
+	</div>
+	<!-- /View -->
+
+	<!-- Edit -->
+	<div class="row" ng-show="summary.isEditing">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="form-group">
+				<input type="text" class="form-control" ng-model="summary.data.background" placeholder="Background URL">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" ng-model="summary.data.profile"placeholder="Picture URL">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" ng-model="summary.data.name" placeholder="Name">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" ng-model="summary.data.occupation" placeholder="Occupation">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" ng-model="summary.data.location" placeholder="Location">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" ng-model="summary.data.phone" placeholder="Phone">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" ng-model="summary.data.email" placeholder="Email">
+			</div>
+			<button class="btn btn-success pull-right" ng-click="saveSummary()">Save</button> 
+		</div>
+	</div>
+	<!-- /Edit -->
+
+</div>

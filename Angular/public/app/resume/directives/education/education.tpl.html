@@ -1,0 +1,77 @@
+<div class="container education" id="education">
+
+	<div class="row">
+		<h1 class="text-center">
+			Education
+			<button class="btn btn-default pull-right" ng-click="editEducation()" ng-hide="education.isEditing">
+				Edit
+			</button>
+			<button class="btn btn-success pull-right" ng-click="saveEducation()" ng-show="education.isEditing">
+				Save
+			</button>
+			<button class="btn btn-primary pull-right" ng-click="addEducation()" ng-show="education.isEditing">
+				Add
+			</button>
+		</h1>
+	</div>
+
+	<!-- View -->
+	<div class="row" ng-hide="education.isEditing">
+		<div class="entry" ng-repeat="exp in education.data">
+			<div class="well">
+				<div class="row">
+					<div class="col-md-10">
+						<h1>{{exp.title}}</h1>
+					</div>
+					<div class="col-md-2">
+						<h1><small><em>{{exp.dates}}</em></small></h1>
+					</div>
+				</div>
+				<div class="row">
+					<h2>{{exp.organization}}</h2>
+					<hr>
+					<ul>
+						<li ng-repeat="description in exp.descriptions">{{description.value}}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /View -->
+
+	<!-- Edit -->
+	<div class="row" ng-show="education.isEditing">
+		<div class="entry" ng-repeat="exp in education.data">
+			<div class="well">
+				<div class="row">
+					<div class="col-md-10">
+						<div class="form-group">
+							<input type="text" class="form-control" ng-model="exp.title" placeholder="Title">
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="form-group">
+							<input type="text" class="form-control" ng-model="exp.dates" placeholder="Dates">
+						</div>
+					</div>
+						<div class="form-group">
+							<input type="text" class="form-control" ng-model="exp.organization" placeholder="Organization">
+						</div>
+					<hr>
+					<ul>
+						<li ng-repeat="description in exp.descriptions">
+							<div class="form-group">
+								<input type="text" class="form-control" ng-model="description.value" placeholder="Description" style="width: 90%; display: inline-block;">
+								<span class="glyphicon glyphicon-remove" ng-click="removeDescription(exp, description)" style="cursor: pointer;"></span>
+							</div>
+						</li>
+					</ul>
+					<button class="btn btn-primary" ng-click="addDescription(exp)">Add Description</button>
+				</div>
+				<button class="btn btn-danger pull-right" ng-click="removeEducation(exp)">Remove</button>
+			</div>
+		</div>
+	</div>
+	<!-- /Edit -->
+
+</div>
